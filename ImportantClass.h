@@ -7,12 +7,13 @@
 //
 
 #import <Cocoa/Cocoa.h>
+#import "Fooing.h"
 
 @interface ImportantClass : NSObject {
-    id foo;
+    NSObject <Fooing> *foo;
 }
 
-- (id)initWithFoo:(id)aFoo;
+- (id)initWithFoo:(NSObject <Fooing>*)aFoo;
 - (void)doReallyImportantStuff;
 
 @end

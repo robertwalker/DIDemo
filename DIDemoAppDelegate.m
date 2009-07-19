@@ -7,13 +7,14 @@
 //
 
 #import "DIDemoAppDelegate.h"
-#import "ImportantClass.h"
+#import "Fooing.h"
 #import "DatabaseFoo.h"
 #import "PixieDustFoo.h"
+#import "ImportantClass.h"
 
 @interface DIDemoAppDelegate (Private)
 
-- (id)databaseOrMagic;
+- (NSObject <Fooing>*)databaseOrMagic;
 
 @end
 
@@ -29,9 +30,9 @@
     }
 }
 
-- (id)databaseOrMagic
+- (NSObject <Fooing>*)databaseOrMagic
 {
-    id aFoo;
+    NSObject <Fooing> *aFoo;
     
     if (toggle) {
         toggle = 0;

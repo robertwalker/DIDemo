@@ -36,6 +36,7 @@
 		B6D042BC0F69476E0088DAC3 /* PixieDustFoo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PixieDustFoo.m; sourceTree = "<group>"; };
 		B6D042BE0F69478B0088DAC3 /* ImportantClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImportantClass.h; sourceTree = "<group>"; };
 		B6D042BF0F69478B0088DAC3 /* ImportantClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImportantClass.m; sourceTree = "<group>"; };
+		B6D042DE0F6959A50088DAC3 /* Fooing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Fooing.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +54,7 @@
 		080E96DDFE201D6D7F000001 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				B6D042DE0F6959A50088DAC3 /* Fooing.h */,
 				B6D042B80F69474D0088DAC3 /* DatabaseFoo.h */,
 				B6D042B90F69474D0088DAC3 /* DatabaseFoo.m */,
 				B6D042BB0F69476E0088DAC3 /* PixieDustFoo.h */,

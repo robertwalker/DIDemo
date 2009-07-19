@@ -7,10 +7,11 @@
 //
 
 #import "ImportantClass.h"
+#import "Fooing.h"
 
 @implementation ImportantClass
 
-- (id)initWithFoo:(id)aFoo
+- (id)initWithFoo:(NSObject <Fooing>*)aFoo
 {
     if ( self = [super init] ) {
         foo = [aFoo retain];
