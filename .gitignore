@@ -1,0 +1,4 @@
+*.pbxuser
+*.mode1*
+*.perspective*
+build
