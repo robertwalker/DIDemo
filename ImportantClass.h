@@ -8,6 +8,12 @@
 
 #import <Cocoa/Cocoa.h>
 
+// An informal protocol
+@interface NSObject (InformalFooing)
+- (void)bar;
+- (void)baz;
+@end
+
 @interface ImportantClass : NSObject {
     id foo;
 }
