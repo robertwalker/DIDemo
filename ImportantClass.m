@@ -21,10 +21,10 @@
 - (void)doReallyImportantStuff
 {
     if ([foo respondsToSelector:@selector(bar)]) {
-        [foo bar];
+        [foo performSelector:@selector(bar)];
     }
     if ([foo respondsToSelector:@selector(baz)]) {
-        [foo baz];
+        [foo performSelector:@selector(baz)];
     } else {
         NSLog(@"%@ did not respond to baz", [foo className]);
     }
