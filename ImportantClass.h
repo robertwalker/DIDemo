@@ -9,10 +9,11 @@
 #import <Cocoa/Cocoa.h>
 
 @interface ImportantClass : NSObject {
-    id foo;
+    id delegate;
 }
 
-- (id)initWithFoo:(id)aFoo;
+@property (retain) id delegate;
+
 - (void)doReallyImportantStuff;
 
 @end

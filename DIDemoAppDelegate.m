@@ -22,10 +22,12 @@
 - (void)awakeFromNib
 {
     for (int i = 0; i < 3; i++) {
-        id injectedClass = [self databaseOrMagic];
-        ImportantClass *importantClass = [[ImportantClass alloc] initWithFoo:injectedClass];
-        NSLog(@"Injecting instance of %@ into %@", [injectedClass className], [importantClass className]);
+        id delegate = [self databaseOrMagic];
+        ImportantClass *importantClass = [[ImportantClass alloc] init];
+        [importantClass setDelegate:delegate];
+        NSLog(@"Setting delegate on %@ to %@", [importantClass className], [delegate className]);
         [importantClass doReallyImportantStuff];
+        [importantClass release];
     }
 }
 

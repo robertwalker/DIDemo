@@ -10,29 +10,23 @@
 
 @implementation ImportantClass
 
-- (id)initWithFoo:(id)aFoo
-{
-    if ( self = [super init] ) {
-        foo = [aFoo retain];
-    }
-    return self;
-}
+@synthesize delegate;
 
 - (void)doReallyImportantStuff
 {
-    if ([foo respondsToSelector:@selector(bar)]) {
-        [foo bar];
+    if ([delegate respondsToSelector:@selector(bar)]) {
+        [delegate performSelector:@selector(bar)];
     }
-    if ([foo respondsToSelector:@selector(baz)]) {
-        [foo baz];
+    if ([delegate respondsToSelector:@selector(baz)]) {
+        [delegate performSelector:@selector(baz)];
     } else {
-        NSLog(@"%@ did not respond to baz", [foo className]);
+        NSLog(@"%@ did not respond to baz", [delegate className]);
     }
 }
 
 - (void)dealloc
 {
-    [foo release];
+    [delegate release];
     [super dealloc];
 }
 
