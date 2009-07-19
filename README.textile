@@ -1,20 +1,23 @@
 h2. About this demo
 
-Each branch of this project starts from the same code base and add one additional change set for demonstrating the different techniques for injecting dependencies into a class.
+Each branch of this project starts from the same code-base and adds one additional change-set for demonstrating the various techniques for injecting dependencies into a class.
 
-The initial code base is a fully dynamic approach, but does contain some compiler warnings. Note that these are warnings and not errors so the does execute successfully.
+The initial code-base is a fully dynamic approach, but does contain some compiler warnings. Note that these are warnings and not errors so the application does execute successfully.
 
-The remaining branches (each prefixed with a_, b_, c_, etc.) show various techniques to resolve the compiler warnings and also show different techniques from dynamic typed solutions to fully statically ones.
+The remaining branches show various techniques to resolve the compiler warnings, and also show different design patterns using both dynamic and static typing.
 
-h2. Branches
+To get the most out of this demo follow the branches in sequence of their prefixes (a_, b_, c_, ect.) comparing each to the _master_ branch.
 
+h3. Branches
+
+* *master:* Fully dynamic allowing some compiler warnings (initial code-base for all branches)
 * *a_dynamic:* Methods are called using performSelector: method
 * *b_informal:* An informal protocol is used to prevent compiler warnings
 * *c_formal:* A formal protocol is used instead of an informal protocol
 * *d_static:* A statically typed version using a formal protocol
 * *e_delegate:* The delegate design pattern is used in place of "constructor" injection
 
-h2. Examining the demos
+h3. Examining the demos
 
 # Use Github to select the branch you want to inspect and click the top-most commit hash link.
-# If you have git installed on your local machine use the Public Clone URL to clone the project, pull each of the branches and inspect the changes with your favorite tool. I would recommend the GitX:http://gitx.frim.nl/ GUI Tool, which is an excellent replacement for gitk.
+# If you have "git":http://git-scm.com/ installed on your local machine use the Public Clone URL to clone the project, pull each of the branches and inspect the changes with your favorite tool. I would recommend the "GitX":http://gitx.frim.nl/ GUI Tool, which is an excellent replacement for gitk.
