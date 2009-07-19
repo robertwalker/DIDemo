@@ -7,6 +7,7 @@
 //
 
 #import "ImportantClass.h"
+#import "Fooing.h"
 
 @implementation ImportantClass
 

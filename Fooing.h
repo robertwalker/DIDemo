@@ -1,5 +1,5 @@
 //
-//  DatabaseFoo.h
+//  Fooing.h
 //  DIDemo
 //
 //  Created by Robert Walker on 3/12/09.
@@ -7,13 +7,12 @@
 //
 
 #import <Cocoa/Cocoa.h>
-#import "Fooing.h"
 
-@interface DatabaseFoo : NSObject <Fooing> {
-
-}
+@protocol Fooing
 
 - (void)bar;
+
+@optional
 - (void)baz;
 
 @end

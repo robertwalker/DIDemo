@@ -7,8 +7,9 @@
 //
 
 #import <Cocoa/Cocoa.h>
+#import "Fooing.h"
 
-@interface PixieDustFoo : NSObject {
+@interface PixieDustFoo : NSObject <Fooing> {
 
 }
 
