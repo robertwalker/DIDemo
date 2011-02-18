@@ -12,7 +12,7 @@
     id delegate;
 }
 
-@property (retain) id delegate;
+@property (nonatomic, retain) id delegate;
 
 - (void)doReallyImportantStuff;
 

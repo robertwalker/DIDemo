@@ -22,12 +22,13 @@
 - (void)awakeFromNib
 {
     for (int i = 0; i < 3; i++) {
-        id delegate = [self databaseOrMagic];
+        id delegate = [[self databaseOrMagic] retain];
         ImportantClass *importantClass = [[ImportantClass alloc] init];
         [importantClass setDelegate:delegate];
         NSLog(@"Setting delegate on %@ to %@", [importantClass className], [delegate className]);
         [importantClass doReallyImportantStuff];
         [importantClass release];
+        [delegate release];
     }
 }
 
