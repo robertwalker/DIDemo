@@ -12,9 +12,11 @@
 
 - (id)initWithFoo:(id)aFoo
 {
-    if ( self = [super init] ) {
+    self = [super init];
+    if (self) {
         foo = [aFoo retain];
     }
+
     return self;
 }
 
