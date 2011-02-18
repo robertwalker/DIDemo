@@ -26,6 +26,7 @@
         ImportantClass *importantClass = [[ImportantClass alloc] initWithFoo:injectedClass];
         NSLog(@"Injecting instance of %@ into %@", [injectedClass className], [importantClass className]);
         [importantClass doReallyImportantStuff];
+        [importantClass release];
     }
 }
 
