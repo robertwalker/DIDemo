@@ -24,8 +24,9 @@
     for (int i = 0; i < 3; i++) {
         id injectedClass = [self databaseOrMagic];
         ImportantClass *importantClass = [[ImportantClass alloc] initWithFoo:injectedClass];
-        NSLog(@"Injecting instance of %@ into %@", [injectedClass className], [importantClass className]);
+        NSLog(@"Injecting instance of %@ into %@", NSStringFromClass([injectedClass class]), NSStringFromClass([importantClass class]));
         [importantClass doReallyImportantStuff];
+        [importantClass release];
     }
 }
 
