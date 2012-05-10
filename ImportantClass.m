@@ -28,7 +28,7 @@
     if ([foo respondsToSelector:@selector(baz)]) {
         [foo baz];
     } else {
-        NSLog(@"%@ did not respond to baz", [foo className]);
+        NSLog(@"%@ did not respond to baz", NSStringFromClass([foo class]));
     }
 }
 
