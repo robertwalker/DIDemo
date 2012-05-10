@@ -7,10 +7,9 @@
 //
 
 #import <Cocoa/Cocoa.h>
+#import "ImportantClass.h"
 
-@interface DatabaseFoo : NSObject {
-
-}
+@interface DatabaseFoo : NSObject <ImportantClassDelegate>
 
 - (void)bar;
 - (void)baz;

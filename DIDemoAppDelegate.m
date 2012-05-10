@@ -25,7 +25,7 @@
         id delegate = [[self databaseOrMagic] retain];
         ImportantClass *importantClass = [[ImportantClass alloc] init];
         [importantClass setDelegate:delegate];
-        NSLog(@"Setting delegate on %@ to %@", [importantClass className], [delegate className]);
+        NSLog(@"Setting delegate on %@ to %@", NSStringFromClass([importantClass class]), NSStringFromClass([delegate class]));
         [importantClass doReallyImportantStuff];
         [importantClass release];
         [delegate release];
@@ -34,7 +34,7 @@
 
 - (id)databaseOrMagic
 {
-    id aFoo;
+    id<ImportantClassDelegate> aFoo;
     
     if (toggle) {
         toggle = 0;

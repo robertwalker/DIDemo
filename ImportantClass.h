@@ -8,12 +8,21 @@
 
 #import <Cocoa/Cocoa.h>
 
-@interface ImportantClass : NSObject {
-    id delegate;
-}
+@protocol ImportantClassDelegate;
 
-@property (nonatomic, retain) id delegate;
+@interface ImportantClass : NSObject
+
+@property (nonatomic, assign) id<ImportantClassDelegate> delegate;
 
 - (void)doReallyImportantStuff;
+
+@end
+
+@protocol ImportantClassDelegate <NSObject>
+
+- (void)bar;
+
+@optional
+- (void)baz;
 
 @end

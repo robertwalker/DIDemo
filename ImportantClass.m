@@ -15,18 +15,18 @@
 - (void)doReallyImportantStuff
 {
     if ([delegate respondsToSelector:@selector(bar)]) {
-        [delegate performSelector:@selector(bar)];
+        [delegate bar];
     }
     if ([delegate respondsToSelector:@selector(baz)]) {
-        [delegate performSelector:@selector(baz)];
+        [delegate baz];
     } else {
-        NSLog(@"%@ did not respond to baz", [delegate className]);
+        NSLog(@"%@ did not respond to baz", NSStringFromClass([delegate class]));
     }
 }
 
 - (void)dealloc
 {
-    [delegate release];
+    self.delegate = nil;
     [super dealloc];
 }
 

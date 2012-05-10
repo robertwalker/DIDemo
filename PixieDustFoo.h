@@ -7,10 +7,9 @@
 //
 
 #import <Cocoa/Cocoa.h>
+#import "ImportantClass.h"
 
-@interface PixieDustFoo : NSObject {
-
-}
+@interface PixieDustFoo : NSObject <ImportantClassDelegate>
 
 - (void)bar;
 
